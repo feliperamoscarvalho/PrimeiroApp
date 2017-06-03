@@ -6,10 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import pucminas.br.primeiroapp.DebugCompat;
+import pucminas.br.primeiroapp.DebugActivity;
 import pucminas.br.primeiroapp.R;
 
-public class PrimeiraTelaActivity extends DebugCompat {
+public class PrimeiraTelaActivity extends DebugActivity {
 
     EditText edtParametroSegundaTela;
     Button btnSegundaTela;

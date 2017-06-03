@@ -9,7 +9,7 @@ import android.util.Log;
  * Created by Felipe on 26/05/2017.
  */
 
-public class DebugCompat extends AppCompatActivity {
+public class DebugActivity extends AppCompatActivity {
 
     protected static final String TAG = "CICLO";
 
@@ -55,8 +55,10 @@ public class DebugCompat extends AppCompatActivity {
         Log.i(TAG, getClassName() + ".onRestart() chamado");
     }
 
-    private String getClassName() {
-        String nome = getClass().getName().toString();
-        return nome;
+    //Retorna o nome da classe sem o pacote
+    private String getClassName(){
+        String s = getClass().getSimpleName();
+        return ">>>>>> " + s;
+
     }
 }

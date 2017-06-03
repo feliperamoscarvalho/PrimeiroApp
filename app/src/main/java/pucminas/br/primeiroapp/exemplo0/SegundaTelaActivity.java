@@ -4,10 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import pucminas.br.primeiroapp.DebugCompat;
+import pucminas.br.primeiroapp.DebugActivity;
 import pucminas.br.primeiroapp.R;
 
-public class SegundaTelaActivity extends DebugCompat {
+public class SegundaTelaActivity extends DebugActivity {
 
     TextView txtParametroRecebido;
 

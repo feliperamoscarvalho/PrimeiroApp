@@ -8,8 +8,10 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import pucminas.br.primeiroapp.exemplo0.PrimeiraTelaActivity;
+import pucminas.br.primeiroapp.exemplo1.CalculadoraActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+        implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,17 +19,41 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btnExemplo0 = (Button) findViewById(R.id.btnExemplo0);
-        btnExemplo0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent it = new Intent(view.getContext(), PrimeiraTelaActivity.class);
-                startActivity(it);
-            }
-        });
+        btnExemplo0.setOnClickListener(this);
+
+        Button btnExemplo1 = (Button) findViewById(R.id.btnExemplo1);
+        btnExemplo1.setOnClickListener(this);
+
     }
 
-    private void facaAlgo(String texto){
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    private void facaAlgo(String texto) {
         Toast.makeText(this, texto, Toast.LENGTH_SHORT).show();
     }
+
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId()==R.id.btnExemplo0)
+            chamaPrimeiraTela();
+        if (view.getId()==R.id.btnExemplo1)
+            chamaExemploCalculadora();
+
+    }
+
+    private void chamaPrimeiraTela() {
+        Intent it = new Intent(this, PrimeiraTelaActivity.class);
+        startActivity(it);
+    }
+
+    private void chamaExemploCalculadora() {
+        Intent it = new Intent(this, CalculadoraActivity.class);
+        startActivity(it);
+    }
+
 
 }

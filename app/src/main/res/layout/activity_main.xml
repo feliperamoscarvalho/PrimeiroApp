@@ -13,9 +13,15 @@
 
 
     <Button
-        android:text="EXEMPLO 0"
+        android:text="EXEMPLO 0 (Ciclo de Vida)"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnExemplo0" />
+
+    <Button
+        android:text="EXEMPLO 1 (Calculadora)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnExemplo1" />
 
 </LinearLayout>

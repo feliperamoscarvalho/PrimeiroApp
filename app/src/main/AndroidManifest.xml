@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".exemplo0.PrimeiraTelaActivity" />
-        <activity android:name=".exemplo0.SegundaTelaActivity"></activity>
+        <activity android:name=".exemplo0.SegundaTelaActivity" />
+        <activity android:name=".exemplo1.CalculadoraActivity"></activity>
     </application>
 
 </manifest>
