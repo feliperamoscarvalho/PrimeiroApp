@@ -17,7 +17,9 @@
         </activity>
         <activity android:name=".exemplo0.PrimeiraTelaActivity" />
         <activity android:name=".exemplo0.SegundaTelaActivity" />
-        <activity android:name=".exemplo1.CalculadoraActivity"></activity>
+        <activity android:name=".exemplo1.CalculadoraActivity" />
+        <activity android:name=".exemplo2.LayoutInflaterActivity" />
+        <activity android:name=".exemplo3.RecursosActivity"></activity>
     </application>
 
 </manifest>

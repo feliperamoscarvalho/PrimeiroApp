@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PrimeiroApp</string>
+    <string name="hello_world">Helo World</string>
+    <string name="lbl_btn_somar">Sum</string>
+    <string name="lbl_txt_primeiro_numero">First Number</string>
+    <string name="lbl_txt_segundo_numero">Second Number</string>
+    <string name="action_settings">Settings</string>
+    <string name="lbl_btn_salvar">Save</string>
+    <string name="lbl_txt_endereco">Address</string>
+    <string name="lbl_txt_instrucoes">Text with instructions</string>
+    <string name="lbl_txt_nome">Name</string>
+    <string name="lbl_txt_telefone">Phone</string>
+    <string name="lbl_txt_texto_com_estilo">Text with Style</string>
+    <string name="lbl_nome" translatable="false">Name</string>
+</resources>

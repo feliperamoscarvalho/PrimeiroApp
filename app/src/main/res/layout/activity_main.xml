@@ -12,16 +12,8 @@
     tools:context="pucminas.br.primeiroapp.MainActivity">
 
 
-    <Button
-        android:text="EXEMPLO 0 (Ciclo de Vida)"
+    <ListView
+        android:id="@+id/listMenu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnExemplo0" />
-
-    <Button
-        android:text="EXEMPLO 1 (Calculadora)"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnExemplo1" />
-
+        android:layout_height="match_parent" />
 </LinearLayout>

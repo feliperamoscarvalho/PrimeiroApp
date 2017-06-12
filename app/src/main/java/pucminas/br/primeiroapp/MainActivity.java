@@ -4,25 +4,48 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import pucminas.br.primeiroapp.exemplo0.PrimeiraTelaActivity;
 import pucminas.br.primeiroapp.exemplo1.CalculadoraActivity;
 
-public class MainActivity extends AppCompatActivity
-        implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
+
+    private ListView listViewExemplos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnExemplo0 = (Button) findViewById(R.id.btnExemplo0);
-        btnExemplo0.setOnClickListener(this);
+        listViewExemplos = (ListView)findViewById(R.id.listMenu);
+        String[] arrayItens = getResources().getStringArray(R.array.lista_exemplos);
 
-        Button btnExemplo1 = (Button) findViewById(R.id.btnExemplo1);
-        btnExemplo1.setOnClickListener(this);
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayItens);
+        listViewExemplos.setAdapter(itemsAdapter);
+
+        listViewExemplos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                switch (position){
+                    case 0:
+                        chamaPrimeiraTela();
+                        break;
+                    case 1:
+                        chamaExemploCalculadora();
+                        break;
+                    case 2:
+                        //trocar pra chamada do exemplo de layoutInflater
+                        chamaPrimeiraTela();
+                        break;
+
+                }
+            }
+        });
 
     }
 
@@ -35,15 +58,6 @@ public class MainActivity extends AppCompatActivity
         Toast.makeText(this, texto, Toast.LENGTH_SHORT).show();
     }
 
-
-    @Override
-    public void onClick(View view) {
-        if (view.getId()==R.id.btnExemplo0)
-            chamaPrimeiraTela();
-        if (view.getId()==R.id.btnExemplo1)
-            chamaExemploCalculadora();
-
-    }
 
     private void chamaPrimeiraTela() {
         Intent it = new Intent(this, PrimeiraTelaActivity.class);
